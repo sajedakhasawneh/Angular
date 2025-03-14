@@ -1,0 +1,21 @@
+<!--<button type="button" class="btn btn-dark">Add Category</button>-->
+<!--<a routerLink="/dashBoard/addCategory" class="btn btn-dark">Add Category</a>-->
+<button type="button" class="btn btn-warning">Add Category</button>
+<br/>
+
+<table class="table table-dark table-striped" *ngFor ="let item of categoryData">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.img}}</td>
+    </tr>
+  </tbody>
+</table>

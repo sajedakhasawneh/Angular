@@ -1,0 +1,41 @@
+<!--<div class="card" style="width: 18rem;" *ngFor="let item of dataProduct">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a routerLink="/product/{{item.id}}" class="btn btn-primary">Show Detalies</a>
+  </div>
+</div>-->
+<!-- Product List -->
+<div class="card" style="width: 18rem;" *ngFor="let item of dataProduct">
+  <img src="{{ item.imageUrl }}" class="card-img-top" alt="{{ item.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.name }}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button class="btn btn-primary" (click)="showDetails(item.id)">Show Details</button>
+  </div>
+</div>
+
+
+<!--<div class="card" style="width: 18rem;" *ngFor="let item of selectedProduct">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <p><strong>category Id:</strong> {{ item?.categoryId }}</p>
+    <p><strong>Id:</strong> {{ item?.id }}</p>
+    <p><strong>Img:</strong> {{ item?.img }}</p>-->
+    <!--<a routerLink="/product/{{item.id}}" class="btn btn-primary">Show Detalies</a>-->
+  <!--</div>
+</div>-->
+
+ <!--Product Details Section (Visible when a product is selected)--> 
+<div class="card mt-3" style="width: 24rem;" *ngIf="selectedProduct">
+  <img src="{{ selectedProduct?.avatar }}" class="card-img-top" alt="{{ selectedProduct?.name }}">
+  <div class="card-body">
+    <!--<h5 class="card-title">{{ selectedProduct?.name }}</h5>-->
+<!--<p><strong>Price:</strong> {{ selectedProduct?.price | currency }}</p>-->
+<p><strong>category Id:</strong> {{ selectedProduct?.categoryId }}</p>
+<p><strong>Id:</strong> {{ selectedProduct?.id }}</p>
+<p><strong>Img:</strong> {{ selectedProduct?.img }}</p>
+</div>
+</div>

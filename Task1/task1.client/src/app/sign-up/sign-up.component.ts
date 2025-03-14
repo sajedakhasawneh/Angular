@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegisterService } from '../Service/register.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class SignUpComponent {
 
-}
+  constructor(private register: RegisterService) {
+  }
+
+  ngOnInit() { }
+
+  Data: any;
+  onSubmit(data: any) {
+    this.register.Register(this.Data).subscribe((result) => {
+      alert("register successfully")
+      })
+    }
+  }
+

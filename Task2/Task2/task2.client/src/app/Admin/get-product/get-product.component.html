@@ -1,0 +1,19 @@
+<button type="button" class="btn btn-warning">Add Product</button>
+<br/>
+<br />
+<table class="table table-dark table-striped" *ngFor="let item of productData">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.avatar}}</td>
+    </tr>
+  </tbody>
+</table>

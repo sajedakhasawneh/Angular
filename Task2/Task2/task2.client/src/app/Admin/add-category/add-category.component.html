@@ -1,0 +1,11 @@
+<form #addCategory="ngForm" (onSumbit)="postCategoryData(addCategory.value)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+    <input type="text" class="form-control" name="name" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input type="text" class="form-control" name="avatar" ngModel>
+  </div>
+  <button type="submit" class="btn btn-warning">Add</button>
+</form>
