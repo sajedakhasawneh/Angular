@@ -18,13 +18,6 @@ const routes: Routes = [
     path: "dashboard", component: DashBoardComponent, children: [
       { path: "getCategory", component: GetCategoryComponent },
       { path: "getProduct", component: GetProductComponent },
-      { path: "addCategory", component: AddCategoryComponent },
-      { path: "addProduct", component: AddProductComponent }
-  ] }
-
-
-
-];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
