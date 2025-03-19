@@ -6,17 +6,17 @@
   </div>
 </div>-->
 
-<div class="card" style="width: 18rem;" *ngFor="let product of dataProduct">
+<!--<div class="card" style="width: 18rem;" *ngFor="let product of dataProduct">
   <img src="{{ product.avatar }}" class="card-img-top" alt="{{ product.name }}">
   <div class="card-body">
     <h5 class="card-title">{{ product.name }}</h5>
     <p class="card-text">{{ product.description }}</p>
     <button class="btn btn-primary" (click)="showDetails(product)">View Details</button>
   </div>
-</div>
+</div>-->
 
 <!-- Product Details Section (Only shown when a product is selected) -->
-<div class="card mt-3" style="width: 24rem;" *ngIf="selectedProduct">
+<!--<div class="card mt-3" style="width: 24rem;" *ngIf="selectedProduct">
   <img src="{{ selectedProduct. avatar}}" class="card-img-top" alt="{{ selectedProduct.name }}">
   <div class="card-body">
     <h5 class="card-title">{{ selectedProduct.name }}</h5>
@@ -24,4 +24,4 @@
     <p><strong>Description:</strong> {{ selectedProduct.description }}</p>
     <button class="btn btn-secondary" (click)="closeDetails()">Close</button>
   </div>
-</div>
+</div>-->

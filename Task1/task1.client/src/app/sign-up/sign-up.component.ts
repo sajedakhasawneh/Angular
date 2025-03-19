@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RegisterService } from '../Service/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,15 +9,16 @@ import { RegisterService } from '../Service/register.service';
 })
 export class SignUpComponent {
 
-  constructor(private register: RegisterService) {
+  constructor(private register: RegisterService, private _route: Router) {
   }
 
   ngOnInit() { }
 
-  Data: any;
+
   onSubmit(data: any) {
-    this.register.Register(this.Data).subscribe((result) => {
-      alert("register successfully")
+    this.register.Register(data).subscribe(() => {
+      alert("register successfully");
+      this._route.navigate(['/Login'])
       })
     }
   }

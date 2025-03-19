@@ -17,7 +17,7 @@ export class GetProductComponent {
   productData: any;
   getProduct() {
     return this.service.getProductsByCategoryId().subscribe((data) => {
-      data = this.productData;
+      this.productData = data;
     })
   }
 }

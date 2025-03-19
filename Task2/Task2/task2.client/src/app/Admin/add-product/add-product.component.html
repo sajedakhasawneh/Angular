@@ -1,1 +1,24 @@
-<p>add-product works!</p>
+<form #addProduct="ngForm" (ngSubmit)="postProductData(addProduct.value)">
+  <div class="mb-3">
+    <label class="form-label">Product</label>
+    <input type="text" class="form-control" name="name" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input type="text" class="form-control" name="avatar" ngModel>
+  </div>
+  <button type="submit" class="btn btn-warning">Add</button>
+  <button type="submit" class="btn btn-warning">remove</button>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Catergory
+    </button>
+    <ul class="dropdown-menu">
+      <li *ngFor="let item of category">
+        <a class="dropdown-item" (click)="selectedCategory(item.id)">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+</form>

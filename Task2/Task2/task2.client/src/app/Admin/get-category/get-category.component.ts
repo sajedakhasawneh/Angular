@@ -18,8 +18,8 @@ export class GetCategoryComponent {
   categoryData: any;
   getCategoryData() {
     return this.service.getCategory().subscribe((data) => {
-      data = this.categoryData;
-      this._route.navigate(['dashboard/addCategory'])
+       this.categoryData = data;
+      //this._route.navigate(['dashboard/addCategory'])
     })
   }
 }

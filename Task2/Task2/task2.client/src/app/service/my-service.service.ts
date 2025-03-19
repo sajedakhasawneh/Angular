@@ -28,4 +28,20 @@ export class MyServiceService {
     return this._http.post("https://67cd64b6dd7651e464ee3d63.mockapi.io/products",data)
 
   }
+
+  editCategory(id: any,data:any) {
+    return this._http.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`,data)
+  }
+
+  editProduct(id:any,data: any) {
+    return this._http.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`, data)
+  }
+
+  getCategoryByCategoryId(id: any) {
+    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`)
+  }
+
+  getProductById(id: any) {
+    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`)
+  }
 }
