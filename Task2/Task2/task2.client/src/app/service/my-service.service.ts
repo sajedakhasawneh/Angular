@@ -42,6 +42,6 @@ export class MyServiceService {
   }
 
   getProductById(id: any) {
-    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`)
+    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`)
   }
 }

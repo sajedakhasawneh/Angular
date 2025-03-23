@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ProductComponent } from './product/product.component';
     LoginComponent,
     SignUpComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    ProfileComponent,
+    EditProfileComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

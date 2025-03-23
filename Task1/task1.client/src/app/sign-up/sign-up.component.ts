@@ -9,17 +9,18 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent {
 
-  constructor(private register: RegisterService, private _route: Router) {
+  constructor(private reg: RegisterService, private _route: Router) {
   }
 
   ngOnInit() { }
 
+  addUser(data: any) {
 
-  onSubmit(data: any) {
-    this.register.Register(data).subscribe(() => {
-      alert("register successfully");
+    this.reg.userRegister(data).subscribe(() => {
+      alert("add new user");
       this._route.navigate(['/Login'])
-      })
-    }
+    })
+
+  }
   }
 

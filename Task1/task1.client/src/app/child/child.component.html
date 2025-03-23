@@ -1,0 +1,6 @@
+<p>child works!</p>
+<h2>{{message}}</h2>
+
+<label for="item-input">Add Message:</label>
+<input type="text" id="item-input" #newMsg>
+<button type="button" (click)="showMessage(newMsg.value)">Add to parent's componenet</button>

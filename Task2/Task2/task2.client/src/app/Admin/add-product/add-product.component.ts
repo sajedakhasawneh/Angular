@@ -28,8 +28,6 @@ export class AddProductComponent {
       this.category = data;
     })
   }
-
-
   categorySel:any
   selectedCategory(id:any) {
     this.categorySel = id;

@@ -1,0 +1,17 @@
+<div class="popup">
+  <h3>Edit Profile</h3>
+
+  <form #editForm="ngForm" (ngSubmit)="saveChanges(editForm)">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="editedUser.name" name="name" ngModel/>
+
+    <label>Email:</label>
+      <input type="email" [(ngModel)]="editedUser.email"name="Email" ngModel />
+
+      <label>Age:</label>
+    <input type="text" [(ngModel)]="editedUser.age" name="age"ngModel/>
+
+    <button type="submit" [disabled]="editForm.invalid">Save</button>
+    <button type="button" (click)="cancel.emit()">Cancel</button>
+  </form>
+</div>

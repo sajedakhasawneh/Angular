@@ -1,0 +1,31 @@
+<!--<div class="profile-container">
+  <h2>User Profile</h2>
+
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.Email }}</p>
+  <p><strong>Age:</strong> {{ user.age }}</p>
+
+  <button (click)="openEditModal()">Edit Profile</button>-->
+<!-- Edit Profile Modal -->
+<!--<app-edit-profile *ngIf="isEdit"
+                    [userData]="user"
+                    (updateProfile)="updateProfile($event)"
+                    (close)="closeEditModal()">
+  </app-edit-profile>
+</div>-->
+
+<div class="profile-container">
+  <h2>User Profile</h2>
+  <p><strong>Name:</strong> {{ user?.name }}</p>
+  <p><strong>Email:</strong> {{ user?.Email }}</p>
+  <p><strong>Age:</strong> {{ user?.age }}</p>
+  <button (click)="openEditPopup()">Edit</button>
+
+  <!-- Edit Profile Popup -->
+  <app-edit-profile *ngIf="isEditing"
+                    [user]="user"
+                    (save)="saveUser($event)"
+                    (cancel)="closeEditPopup()">
+  </app-edit-profile>
+</div>
+

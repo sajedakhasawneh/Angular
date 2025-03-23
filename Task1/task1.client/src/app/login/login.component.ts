@@ -14,14 +14,15 @@ export class LoginComponent {
   ngOnInit() { }
 
 
-  usersData: any
+
+
   getData(enteredUser: any) {
     this.service.getAllUsers().subscribe((data) => {
       let user = data.find((p: any) => p.Email == enteredUser.Email && p.password == enteredUser.password);
-
       if (user) {
+        localStorage.setItem('loggedUser', JSON.stringify(user));
         alert("login successfully")
-        this._route.navigate(['/category'])
+        this._route.navigate(['/profile'])
       } else {
         alert("Invalid Email or password ")
       }

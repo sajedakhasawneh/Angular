@@ -15,12 +15,12 @@ const routes: Routes = [
   { path: "category", component: CategoryComponent },
   { path: "product", component: ProductComponent },
   { path: "product/:id", component: ProductComponent },
-  //{ path: "product/:id", component: ProductDetaliesComponent },
+
   {
     path: "dashboard", component: DashBoardComponent, children: [
       { path: "getCategory", component: GetCategoryComponent },
       { path: "getProduct", component: GetProductComponent },
-      { path: "addProduct", component: AddCategoryComponent },
+      { path: "addProduct", component: AddProductComponent },
       { path: "addCategory", component: AddCategoryComponent },
       { path: "editCategory/:id", component: EditCategoryComponent },
       { path: "editProduct/:id", component: EditProductComponent }
