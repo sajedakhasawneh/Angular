@@ -1,0 +1,17 @@
+<form #updateVoucher="ngForm" (ngSubmit)="editVoucher(updateVoucher.value)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Voucher Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="updateContainer.name">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Price</label>
+    <input type="text" class="form-control" name="price" [(ngModel)]="updateContainer.price">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Quantity</label>
+    <input type="text" class="form-control" name="quantity" [(ngModel)]="updateContainer.quantity">
+  </div>
+  <button type="submit" class="btn btn-primary">Update Voucher</button>
+</form>
