@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SubjectBehavComponent } from './subject-behav/subject-behav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChildComponent } from './child/child.component';
     ProfileComponent,
     EditProfileComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    SubjectBehavComponent
   ],
   imports: [
     BrowserModule,
